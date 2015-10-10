@@ -13,7 +13,7 @@ export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
 export EDITOR="brackets"
-export GIT_EDITOR='$EDITOR'
+export GIT_EDITOR='brackets -n -W'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
