@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
+
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
+export BASH_IT_THEME='bakke'
 
 # Your place for hosting Git repos. I use this for private repos.
 export GIT_HOSTING='git@git.domain.com'
+
+# Set my editor and git editor
+export EDITOR="brackets"
+export GIT_EDITOR='brackets -n -W'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
