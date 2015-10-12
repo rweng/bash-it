@@ -3,7 +3,7 @@
 alias e="$EDITOR"
 alias e.="$EDITOR ."
 alias c="cd ~/Code"
-alias rm="/usr/local/bin/trash"
+alias rm="trash"
 alias grm="git clean -f; git reset --hard"
 alias idea='open -a "IntelliJ IDEA 15" .'
 alias gca="git add .; git commit -v"
