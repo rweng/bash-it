@@ -16,6 +16,7 @@ alias dkideps='docker-image-dependencies'  # Output a graph of image dependencie
 alias dkre='docker-runtime-environment'  # List environmental variables of the supplied image ID
 alias dkelc='docker exec -it `dklcid` bash' # Enter last container (works with Docker 1.3 and above)
 
+alias dc="docker-compose"
 alias dstart="docker-machine start default"
-alias dbe="docker-compose run web bundle exec"
-alias dbash="docker-compose run web bash"
+
+
