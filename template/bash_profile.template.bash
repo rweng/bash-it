@@ -5,14 +5,14 @@ command_exists () {
 }
 
 # Path to the bash it configuration
-export BASH_IT="$HOME/.bash_it"
+export BASH_IT="$HOME/.bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME='bakke'
 
 # Set my editor and git editor
-if [ command_exists atom ]; then
+if command_exists atom; then
   export EDITOR="atom"
 else
   export EDITOR="vim"
