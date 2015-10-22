@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
 
@@ -8,8 +12,11 @@ export BASH_IT="$HOME/.bash_it"
 export BASH_IT_THEME='bakke'
 
 # Set my editor and git editor
-export EDITOR="subl"
-export GIT_EDITOR='subl -e'
+if [ command_exists atom ]; then
+  export EDITOR="atom"
+else
+  export EDITOR="vim"
+fi
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
