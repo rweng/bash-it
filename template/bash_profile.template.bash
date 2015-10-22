@@ -12,8 +12,8 @@ export BASH_IT_THEME='bakke'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="brackets"
-export GIT_EDITOR='brackets -n -W'
+export EDITOR="subl"
+export GIT_EDITOR='subl -e'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK

@@ -10,10 +10,6 @@ alias rm="trash"
 alias grm="git clean -f; git reset --hard"
 alias gca="git add .; git commit -v"
 alias psg="ps -ef|grep"
-
-# direnv
-eval "$(direnv hook $0)"
-
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 
 # kill pid that listens on given port
