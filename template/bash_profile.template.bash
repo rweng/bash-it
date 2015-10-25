@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export PATH="$PATH:./bin"
+
 command_exists () {
     type "$1" &> /dev/null ;
 }
