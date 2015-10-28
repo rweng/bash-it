@@ -2,6 +2,7 @@ cite about-plugin
 about-plugin 'Helpers to get Docker setup correctly for docker-machine'
 
 alias dup="docker-machine start"
+alias denv="docker-machine env"
 
 # Note, this might need to be different if you use a machine other than 'dev'
 if [[ `uname -s` == "Darwin" ]]; then
