@@ -19,4 +19,6 @@ function laptop(){
   brew_install_or_upgrade 'brew-cask'
 
   setup_markdown_preview
+  brew cask install --force spectacle
+  brew cask install --force atom
 }
