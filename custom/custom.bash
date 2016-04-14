@@ -3,6 +3,8 @@
 # add IDEA bin
 export PATH="$PATH:/Applications/IntelliJ IDEA 14.app/Contents/MacOS/"
 
+export KIIP_REPO="~/Sync/home/kiip"
+
 alias e="$EDITOR"
 alias e.="$EDITOR ."
 alias c="cd ~/Code"

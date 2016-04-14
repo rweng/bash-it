@@ -21,4 +21,5 @@ function laptop(){
   setup_markdown_preview
   brew cask install --force spectacle
   brew cask install --force atom
+  brew cask install --force vlc
 }

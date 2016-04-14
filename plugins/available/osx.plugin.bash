@@ -81,6 +81,22 @@ function pri ()
     ri -T "${1}" | open -fa $PREVIEW
 }
 
+function set-hostname(){
+  about 'sets hostname'
+  param '1: hostname'
+  group 'osx'
+
+  if [ ! $(uname) = "Darwin" ]
+  then
+    echo "This function only works with Mac OS X"
+    return 1
+  fi
+
+  sudo scutil --set ComputerName ${1}
+  sudo scutil --set LocalHostName ${1}
+  sudo scutil --set HostName ${1}
+}
+
 # Download a file and open it in Preview
 function prevcurl() {
   about 'download a file and open it in Preview'

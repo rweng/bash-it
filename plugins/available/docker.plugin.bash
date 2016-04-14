@@ -1,6 +1,12 @@
 cite about-plugin
 about-plugin 'Helpers to more easily work with Docker'
 
+function docker-remove-exited-containers(){
+  about 'removes all exited containers'
+  group 'docker'
+  docker rm `docker ps -a | grep Exited | awk '{print $1 }'`
+}
+
 function docker-remove-most-recent-container() {
   about 'attempt to remove the most recent container from docker ps -a'
   group 'docker'
