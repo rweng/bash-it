@@ -56,6 +56,10 @@ alias gnew="git log HEAD@{1}..HEAD@{0}"
 # Add uncommitted and unstaged changes to the last commit
 alias gcaa="git commit -a --amend -C HEAD"
 alias ggui="git gui"
+alias grm="git clean -f; git reset --hard"
+alias gca="git add .; git commit -v"
+alias gsr="git svn rebase"
+alias gsc="git svn dcommit"
 
 case $OSTYPE in
   darwin*)

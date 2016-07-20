@@ -1,1 +1,0 @@
-../available/docker-machine.plugin.bash

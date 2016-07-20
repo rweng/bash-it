@@ -1,17 +1,22 @@
 # export PATH="$PATH:~/.bin"
 
-# add IDEA bin
-export PATH="$PATH:/Applications/IntelliJ IDEA 14.app/Contents/MacOS/"
-
 export KIIP_REPO="~/Sync/home/kiip"
 
+alias l="ls -G"
 alias e="$EDITOR"
 alias e.="$EDITOR ."
 alias c="cd ~/Code"
-alias grm="git clean -f; git reset --hard"
-alias gca="git add .; git commit -v"
 alias psg="ps -ef|grep"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
+alias myip="curl http://ipecho.net/plain; echo"
+
+if command_exists ncdu; then
+	alias du="ncdu"
+fi
+
+function most_used_commands {
+	history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
+}
 
 # kill pid that listens on given port
 # e.g. kport 3000

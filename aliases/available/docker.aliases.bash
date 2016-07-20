@@ -18,5 +18,4 @@ alias dkelc='docker exec -it `dklcid` bash' # Enter last container (works with D
 
 alias dc="docker-compose"
 alias dstart="docker-machine start default"
-
-
+alias docker-remove-volumes="docker volume ls -qf dangling=true | xargs docker volume rm"
