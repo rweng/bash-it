@@ -1,1 +1,0 @@
-../template/bash_profile.template.bash
