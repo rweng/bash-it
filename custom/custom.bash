@@ -1,7 +1,5 @@
 # export PATH="$PATH:~/.bin"
 
-export KIIP_REPO="~/Sync/home/kiip"
-
 alias l="ls -G"
 alias e="$EDITOR"
 alias e.="$EDITOR ."
@@ -9,6 +7,10 @@ alias c="cd ~/Code"
 alias psg="ps -ef|grep"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias myip="curl http://ipecho.net/plain; echo"
+alias gd="git diff"
+
+# set up git completion for g alias
+complete -o default -o nospace -F _git g
 
 if command_exists ncdu; then
 	alias du="ncdu"
