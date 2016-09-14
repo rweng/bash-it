@@ -12,10 +12,6 @@ alias gd="git diff"
 # set up git completion for g alias
 complete -o default -o nospace -F _git g
 
-if command_exists ncdu; then
-	alias du="ncdu"
-fi
-
 function most_used_commands {
 	history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 }
