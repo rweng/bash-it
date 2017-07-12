@@ -1,3 +1,6 @@
+# enable extended globbing
+shopt -s globstar
+
 # export PATH="$PATH:~/.bin"
 
 alias l="ls -G"
