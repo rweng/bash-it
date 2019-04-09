@@ -2,6 +2,12 @@
 
 export PATH="$PATH:./bin"
 
+# setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 command_exists () {
     type "$1" &> /dev/null ;
 }
@@ -25,7 +31,7 @@ else
 
   # grep recursively for pattern
   # e.g. grep for files containing that exact string: r HTTP
-  # e.g. search for double quoted string starting with http, ignoring case: r '"http[^"]*"' -i 
+  # e.g. search for double quoted string starting with http, ignoring case: r '"http[^"]*"' -i
   function r() {
     grep "$1" ${@:2} -R .
   }
@@ -67,9 +73,4 @@ export SCM_CHECK=true
 source $BASH_IT/bash_it.sh
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
