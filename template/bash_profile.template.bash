@@ -15,10 +15,16 @@ command_exists () {
 # enable auto cd. if fails, check echo $BASH_VERSION which must be greater than 4
 # on os x, you can install updated bash with brew and set it as login shell w/: brew install bash;echo /usr/local/bin/bash|sudo tee -a /etc/shells;chsh -s /usr/local/bin/bash
 # see http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html for more commands
-shopt -s autocd
+if shopt | grep autocd > /dev/null
+then
+ shopt -s autocd
+fi
 
 # correct minor spelling errors when cd'ing into a folder
-shopt -s cdspell
+if shopt | grep cdspell > /dev/null
+then
+ shopt -s cdspell
+fi
 
 if command_exists ag; then
   alias f="ag -g"

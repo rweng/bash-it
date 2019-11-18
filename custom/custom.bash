@@ -1,5 +1,8 @@
 # enable extended globbing
-shopt -s globstar
+if shopt | grep globstar > /dev/null
+then
+ shopt -s globstar
+fi
 
 # export PATH="$PATH:~/.bin"
 
