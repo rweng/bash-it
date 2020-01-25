@@ -3,3 +3,4 @@ about-alias 'AWS Amplify CLI aliases'
 
 alias amp='amplify push -y'
 alias ams='amplify status'
+alias ame='amplify env'
